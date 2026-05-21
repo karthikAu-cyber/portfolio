@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karthikeyan K — Cybersecurity Portfolio</title>
+  <meta name="description" content="SOC Analyst & Cybersecurity Professional — Threat detection, vulnerability assessment, and security operations portfolio." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">K<span>.</span>K</div>
+    <div class="nav-links">
+      <a href="#hero">Entry</a>
+      <a href="#about">Profile</a>
+      <a href="#skills">Arsenal</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Records</a>
+      <a href="#certifications">Seals</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <button class="mobile-close" aria-label="Close">✕</button>
+  <a href="#hero">Entry</a>
+  <a href="#about">Profile</a>
+  <a href="#skills">Arsenal</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Records</a>
+  <a href="#certifications">Seals</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section id="hero" class="section hero">
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div class="hero-text fade-up">
+      <div class="hero-icon">🛡</div>
+      <h1>Karthikeyan K</h1>
+      <div class="subtitle">SOC Analyst &amp; Cybersecurity Professional</div>
+      <p>Aspiring cybersecurity professional specializing in threat detection, vulnerability assessment, and security operations</p>
+      <div class="bounce" style="margin-top:2rem;color:rgba(77,208,225,0.5);font-size:1.5rem;">⌄</div>
+    </div>
+    <div class="hero-img-wrap fade-up">
+      <div class="hero-glow"></div>
+      <div class="hero-img"><img src="profile.png" alt="Karthikeyan K" /></div>
+      <div class="hero-orbit"></div>
+    </div>
+  </div>
+  <div class="hero-corners"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="heading-block fade-up">
+      <h2 class="section-title">Knowledge Profile</h2>
+      <hr class="divider" />
+    </div>
+    <div class="grid-2">
+      <div class="glass about-card fade-left">
+        <div class="icon">👤</div>
+        <h3>Profile Dossier</h3>
+        <p>Cybersecurity fresher with hands-on experience in vulnerability scanning, penetration testing, and security operations. Passionate about building resilient defense systems, identifying vulnerabilities through structured threat modelling, and streamlining incident response workflows through automation.</p>
+        <p>CEH certified with all 5 Forage programmes complete. Experienced with ELK SIEM, Azure, MITRE ATT&amp;CK, and enterprise security tools. Focused on SOC L1 operations, threat detection &amp; incident response.</p>
+      </div>
+      <div class="fade-right" style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div class="glass about-sub">
+          <div class="icon">🎓</div>
+          <h4>Education</h4>
+          <div class="detail">B.Tech – Computer Engineering</div>
+          <div class="sub-detail">Specialization in Cyber Security</div>
+          <div class="info">Karunya Institute of Technology and Sciences, Coimbatore</div>
+          <div class="meta">CGPA: 7.35 • Cybersecurity Engineer '26</div>
+        </div>
+        <div class="glass about-sub">
+          <div class="icon">🏆</div>
+          <h4>Specializations</h4>
+          <div class="spec-grid">
+            <div>• Vulnerability Scanning</div>
+            <div>• Threat Modelling</div>
+            <div>• Incident Management</div>
+            <div>• Risk Management</div>
+            <div>• IT Governance</div>
+            <div>• Security Product Dev</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SKILLS ═══════════ -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="heading-block fade-up">
+      <h2 class="section-title">Technical Arsenal</h2>
+      <p class="section-subtitle">Tools, technologies, and frameworks in my security toolkit</p>
+      <hr class="divider" />
+    </div>
+    <div class="grid-3">
+
+      <div class="glass skill-card fade-up">
+        <div class="skill-header"><span class="icon" style="color:#4dd0e1">🛡</span><h3>Security Domains</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">IT Governance & Compliance</span><span class="skill-tag">Risk Management</span>
+          <span class="skill-tag">Threat Modelling</span><span class="skill-tag">Phishing Controls</span>
+          <span class="skill-tag">Incident Management</span><span class="skill-tag">Vulnerability Scanning</span>
+          <span class="skill-tag">Security Product Development</span>
+        </div>
+      </div>
+
+      <div class="glass skill-card fade-up">
+        <div class="skill-header"><span class="icon" style="color:#64ffda">⟩_</span><h3>Tools & Platforms</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">ELK Stack (Elasticsearch, Logstash, Kibana)</span><span class="skill-tag">Nmap</span>
+          <span class="skill-tag">Burp Suite</span><span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">SQLMap</span><span class="skill-tag">Metasploit (Basic)</span>
+          <span class="skill-tag">Selenium</span>
+        </div>
+      </div>
+
+      <div class="glass skill-card fade-up">
+        <div class="skill-header"><span class="icon" style="color:#4dd0e1">☁</span><h3>Cloud & Infrastructure</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">Microsoft Azure (AZ-900)</span><span class="skill-tag">Cloud Security Concepts</span>
+          <span class="skill-tag">Network Security</span><span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">DNS</span><span class="skill-tag">Firewalls</span><span class="skill-tag">VPNs</span>
+        </div>
+      </div>
+
+      <div class="glass skill-card fade-up">
+        <div class="skill-header"><span class="icon" style="color:#64ffda">⟨/⟩</span><h3>Programming</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python (Automation & Scripting)</span><span class="skill-tag">SQL</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="glass skill-card fade-up">
+        <div class="skill-header"><span class="icon" style="color:#4dd0e1">🔒</span><h3>Frameworks & Standards</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">OWASP Top 10</span><span class="skill-tag">GDPR Compliance</span>
+          <span class="skill-tag">AES-256 / RSA Encryption</span><span class="skill-tag">SHA-256</span>
+        </div>
+      </div>
+
+      <div class="glass skill-card fade-up">
+        <div class="skill-header"><span class="icon" style="color:#64ffda">🖧</span><h3>Operating Systems</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">Windows</span><span class="skill-tag">Linux (Ubuntu, Kali)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROJECTS ═══════════ -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="heading-block fade-up">
+      <h2 class="section-title">Classified Volumes</h2>
+      <p class="section-subtitle">Select a volume to access project archives</p>
+      <hr class="divider" />
+    </div>
+    <div class="grid-2" style="max-width:900px;margin:0 auto;">
+
+      <a href="https://github.com/karthikAu-cyber/SOC-Threat-Intelligence-Platform.git" target="_blank" rel="noopener noreferrer" class="glass project-card fade-up">
+        <div class="project-top"><span class="icon">📖</span><span class="ext">↗</span></div>
+        <div class="project-cat">Security Automation</div>
+        <h3>Automated SOC Threat Intelligence Platform with Real-Time SIEM Integration</h3>
+        <p class="desc">Built a Python/Nmap/Burp Suite/SQLMap scanning platform targeting OWASP Top 10 vulnerabilities; integrated ELK Stack for real-time threat dashboards — replicating enterprise SIEM and security monitoring workflows.</p>
+        <div class="project-link"><span>Access File</span> <span>↗</span></div>
+      </a>
+
+      <a href="https://github.com/karthikAu-cyber/biometric_auth.git" target="_blank" rel="noopener noreferrer" class="glass project-card fade-up">
+        <div class="project-top"><span class="icon">📖</span><span class="ext">↗</span></div>
+        <div class="project-cat">Security Product Development</div>
+        <h3>Multi-Modal Voice Biometric Authentication & Real-Time Spoofing Detection</h3>
+        <p class="desc">Engineered a privacy-preserving security product using federated learning; conducted adversarial threat modelling to evaluate and harden system resilience with multi-modal authentication.</p>
+        <div class="project-link"><span>Access File</span> <span>↗</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EXPERIENCE ═══════════ -->
+<section id="experience" class="section">
+  <div class="container-sm">
+    <div class="heading-block fade-up">
+      <h2 class="section-title">Archive Records</h2>
+      <p class="section-subtitle">Professional journey and virtual experience programmes</p>
+      <hr class="divider" />
+    </div>
+    <div class="timeline">
+
+      <!-- 1 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon exp">💼</span>
+            <div><h3>Cybersecurity with AI Trainee</h3><div class="org">NIIT Foundation</div>
+            <div class="meta"><span>📅 July 2025 – August 2025</span><span>•</span><span>India</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Developed and executed vulnerability scanning workflows on 20+ systems using Python/Selenium automation, reducing incident response time by 30%</span></li>
+            <li><span class="arrow">▹</span><span>Implemented AES-256 and RSA encryption controls for secure system development; performed security product testing across simulated enterprise environments</span></li>
+            <li><span class="arrow">▹</span><span>Applied IT security hardening measures aligned with governance and compliance frameworks</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon exp">💼</span>
+            <div><h3>Cybersecurity & Ethical Hacking Intern</h3><div class="org">CODINTECH IT Solutions</div>
+            <div class="meta"><span>📅 May 2024 – June 2024</span><span>•</span><span>India</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Performed penetration testing and threat simulation, mapping attack vectors through structured threat modelling exercises</span></li>
+            <li><span class="arrow">▹</span><span>Built a secure backup system with AES-256/RSA encryption and SHA-256 integrity validation — a security product development initiative</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot virtual"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon virt">🌐</span>
+            <div><h3>Shields Up: Cybersecurity Job Simulation</h3><div class="org">AIG — Forage</div>
+            <div class="meta"><span>📅 2025</span><span>•</span><span>Remote</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Responded to a zero-day vulnerability (Log4Shell / CVE-2021-44228) with CVSS risk scoring and stakeholder communication</span></li>
+            <li><span class="arrow">▹</span><span>Wrote a Python brute-force decryption script for ransomware response simulation</span></li>
+            <li><span class="arrow">▹</span><span>Performed CISA advisory triage and vulnerability remediation workflows</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot virtual"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon virt">🌐</span>
+            <div><h3>Introduction to Cybersecurity Job Simulation</h3><div class="org">Commonwealth Bank — Forage</div>
+            <div class="meta"><span>📅 2025</span><span>•</span><span>Remote</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Conducted attack surface analysis and security controls assessment for a BFSI environment</span></li>
+            <li><span class="arrow">▹</span><span>Applied cybersecurity fundamentals including threat identification, risk awareness, and security policy review</span></li>
+            <li><span class="arrow">▹</span><span>Exposure to banking-specific threat models and security frameworks</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot virtual"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon virt">🌐</span>
+            <div><h3>Cybersecurity Virtual Experience</h3><div class="org">Deloitte — Forage</div>
+            <div class="meta"><span>📅 2025</span><span>•</span><span>Remote</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Assessed GDPR compliance implications of data breaches</span></li>
+            <li><span class="arrow">▹</span><span>Drafted incident response documentation reducing simulated legal exposure by 15%</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot virtual"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon virt">🌐</span>
+            <div><h3>Cybersecurity Analyst Simulation</h3><div class="org">Clifford Chance — Forage</div>
+            <div class="meta"><span>📅 2025</span><span>•</span><span>Remote</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Applied enterprise security practices — network monitoring, threat analysis, vulnerability assessment, and incident response</span></li>
+            <li><span class="arrow">▹</span><span>Achieved 100% remediation rate on high-priority alerts</span></li>
+            <li><span class="arrow">▹</span><span>Produced incident response documentation and data breach response workflows</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot virtual"></div>
+        <div class="glass timeline-card">
+          <div class="header"><span class="icon virt">🌐</span>
+            <div><h3>Cybersecurity Virtual Experience</h3><div class="org">Mastercard — Forage</div>
+            <div class="meta"><span>📅 2025</span><span>•</span><span>Remote</span></div></div>
+          </div>
+          <ul>
+            <li><span class="arrow">▹</span><span>Designed phishing control simulations for a mock enterprise</span></li>
+            <li><span class="arrow">▹</span><span>Improved employee phishing detection rate by 30% through targeted security awareness recommendations</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CERTIFICATIONS ═══════════ -->
+<section id="certifications" class="section">
+  <div class="container">
+    <div class="heading-block fade-up">
+      <h2 class="section-title">Verified Seals</h2>
+      <p class="section-subtitle">Professional certifications and accreditations</p>
+      <hr class="divider" />
+    </div>
+    <div class="grid-3">
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">CEH</div><h3>Certified Ethical Hacker (CEH)</h3>
+        <div class="cert-issuer">EC-Council</div><div class="cert-year">Issued: 2026</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">CC</div><h3>Certified in Cybersecurity (CC)</h3>
+        <div class="cert-issuer">ISC²</div><div class="cert-year">Issued: 2025–2028</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">CISCO-EH</div><h3>Ethical Hacker</h3>
+        <div class="cert-issuer">Cisco</div><div class="cert-year">Issued: 2025</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">OWASP</div><h3>OWASP Top 10</h3>
+        <div class="cert-issuer">Linux Foundation</div><div class="cert-year">Issued: 2025</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">CIP</div><h3>Critical Infrastructure Protection</h3>
+        <div class="cert-issuer">OPSWAT</div><div class="cert-year">Issued: 2025–2026</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">SOC</div><h3>SOC Project Training</h3>
+        <div class="cert-issuer">Nullclass</div><div class="cert-year">Issued: 2025</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">AZ-900</div><h3>Azure Fundamentals AZ-900</h3>
+        <div class="cert-issuer">Microsoft</div><div class="cert-year">Issued: 2023</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+      <div class="glass cert-card fade-up">
+        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
+        <div class="cert-id">CTI-101</div><h3>Cyber Threat Intelligence 101</h3>
+        <div class="cert-issuer">arcX</div><div class="cert-year">Issued: 2025</div>
+        <div class="cert-badge">✓ Verified Credential</div>
+      </div>
+
+    </div>
+    <div class="glass cert-footer fade-up" style="margin-top:3rem;">
+      <p>All certifications are actively maintained and regularly renewed.<span>Verification credentials available upon request.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="heading-block fade-up">
+      <div style="font-size:2.5rem;color:var(--cyber-cyan);margin-bottom:1.5rem;">⟩_</div>
+      <h2 class="section-title">Secure Terminal</h2>
+      <p class="section-subtitle">Establish encrypted communication channel</p>
+      <hr class="divider" />
+    </div>
+
+    <div class="contact-grid">
+      <!-- Form -->
+      <div class="glass contact-form-panel fade-left">
+        <h3>Send Message</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="user_name">NAME</label>
+            <input type="text" id="user_name" name="user_name" required placeholder="Karthikeyan K" />
+          </div>
+          <div class="form-group">
+            <label for="user_email">EMAIL</label>
+            <input type="email" id="user_email" name="user_email" required placeholder="karthik40801@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">⟩ Transmit Message</button>
+        </form>
+      </div>
+
+      <!-- Links -->
+      <div class="glass contact-links-panel fade-right">
+        <h3>Direct Links</h3>
+
+        <a href="#" class="contact-link" data-copy="karthik40801@gmail.com">
+          <div class="link-icon" style="color:#4dd0e1">✉</div>
+          <div class="link-info"><div class="link-label">Email</div><div class="link-value">karthik40801@gmail.com</div></div>
+          <div class="link-action">📋</div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/karthikeyank08/" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <div class="link-icon" style="color:#4dd0e1">in</div>
+          <div class="link-info"><div class="link-label">LinkedIn</div><div class="link-value">linkedin.com/in/karthikeyank08</div></div>
+          <div class="link-action">↗</div>
+        </a>
+
+        <a href="https://github.com/karthikAu-cyber" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <div class="link-icon" style="color:#64ffda">⟨/⟩</div>
+          <div class="link-info"><div class="link-label">GitHub</div><div class="link-value">github.com/karthikAu-cyber</div></div>
+          <div class="link-action">↗</div>
+        </a>
+
+        <a href="https://tryhackme.com/p/karthik40801" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <div class="link-icon" style="color:#ff5252">🛡</div>
+          <div class="link-info"><div class="link-label">TryHackMe</div><div class="link-value">tryhackme.com/p/karthik40801</div></div>
+          <div class="link-action">↗</div>
+        </a>
+
+        <a href="https://play.picoctf.org/users/karthikeyank" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <div class="link-icon" style="color:#b388ff">🚩</div>
+          <div class="link-info"><div class="link-label">picoCTF</div><div class="link-value">picoctf.org/users/karthikeyank</div></div>
+          <div class="link-action">↗</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Info Bar -->
+    <div class="glass info-bar fade-up">
+      <div class="info-bar-inner">
+        <p><strong>Response Time:</strong> Typically within 24-48 hours</p>
+        <p><strong>Availability:</strong> Open to full-time opportunities</p>
+        <p><strong>Work Mode:</strong> Remote / On-site</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer fade-up" style="margin-top:4rem;">
+      <p>© 2026 Karthikeyan K • Cybersecurity Portfolio</p>
+      <p>Built with precision and secured by design</p>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
