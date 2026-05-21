@@ -19,4 +19,15 @@ Thumbs.db
 
 # Logs
 *.log
-npm-debug.log*
+
+# Old React/TS source (kept locally, not pushed)
+src/
+package.json
+package-lock.json
+vite.config.ts
+tsconfig.json
+postcss.config.mjs
+guidelines/
+ATTRIBUTIONS.md
+public/
+docs/
