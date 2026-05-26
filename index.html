@@ -10,6 +10,28 @@
 </head>
 <body>
 
+<!-- Side Status Monitor (Desktop HUD) -->
+<div class="side-monitor" aria-hidden="true">
+  <div class="monitor-header">
+    <span class="status-pulse"></span>
+    <span class="monitor-title">SEC OPS MONITOR</span>
+  </div>
+  <div class="monitor-body">
+    <div class="monitor-line"><span>SYS_STATUS:</span> <span class="cyan">ACTIVE</span></div>
+    <div class="monitor-line"><span>ENCR_MODE:</span> <span class="cyan">AES_256</span></div>
+    <div class="monitor-line"><span>ACTIVE_SEC:</span> <span id="monitor-active-sec" class="emerald">ENTRY</span></div>
+    <div class="monitor-divider"></div>
+    <div class="monitor-console-title">LIVE EVENTS LOG:</div>
+    <div class="monitor-log" id="monitor-log-feed">
+      <div>[SYS] PORTFOLIO INITIALIZED</div>
+      <div>[SYS] HUD MODULE STABLE</div>
+    </div>
+  </div>
+</div>
+
+<!-- Scan-line overlay -->
+<div class="scanline-overlay" aria-hidden="true"></div>
+
 <!-- Toast -->
 <div id="toast" class="toast"></div>
 
@@ -44,14 +66,20 @@
 
 <!-- ═══════════ HERO ═══════════ -->
 <section id="hero" class="section hero">
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
   <div class="hero-grid"></div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <div class="hero-text fade-up">
-      <div class="hero-icon">🛡</div>
+      <div class="hero-badge">🛡 SECURITY CLEARANCE GRANTED</div>
       <h1>Karthikeyan K</h1>
-      <div class="subtitle">SOC Analyst &amp; Cybersecurity Professional</div>
+      <div class="subtitle"><span id="typed-text"></span><span class="typing-cursor">|</span></div>
       <p>Aspiring cybersecurity professional specializing in threat detection, vulnerability assessment, and security operations</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="11">0</span><span class="stat-label">Certifications</span></div>
+        <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Forage Programs</span></div>
+      </div>
       <div class="bounce" style="margin-top:2rem;color:rgba(77,208,225,0.5);font-size:1.5rem;">⌄</div>
     </div>
     <div class="hero-img-wrap fade-up">
@@ -74,8 +102,8 @@
       <div class="glass about-card fade-left">
         <div class="icon">👤</div>
         <h3>Profile Dossier</h3>
-        <p>Cybersecurity fresher with hands-on experience in vulnerability scanning, penetration testing, and security operations. Passionate about building resilient defense systems, identifying vulnerabilities through structured threat modelling, and streamlining incident response workflows through automation.</p>
-        <p>CEH certified with all 5 Forage programmes complete. Experienced with ELK SIEM, Azure, MITRE ATT&amp;CK, and enterprise security tools. Focused on SOC L1 operations, threat detection &amp; incident response.</p>
+        <p>Cybersecurity fresher with hands-on experience in vulnerability scanning, penetration testing fundamentals, and security operations. Passionate about building resilient defense systems, identifying vulnerabilities through structured threat modelling, and streamlining incident response workflows through automation.</p>
+        <p>CEH certified with all 5 Forage cybersecurity virtual experience programs completed. Experienced with ELK SIEM, Azure, MITRE ATT&amp;CK, and enterprise security concepts. Focused on SOC L1 operations, threat detection, and incident response.</p>
       </div>
       <div class="fade-right" style="display:flex;flex-direction:column;gap:1.5rem;">
         <div class="glass about-sub">
@@ -95,7 +123,7 @@
             <div>• Incident Management</div>
             <div>• Risk Management</div>
             <div>• IT Governance</div>
-            <div>• Security Product Dev</div>
+            <div>• Security Product Development</div>
           </div>
         </div>
       </div>
@@ -192,6 +220,14 @@
         <div class="project-cat">Security Product Development</div>
         <h3>Multi-Modal Voice Biometric Authentication & Real-Time Spoofing Detection</h3>
         <p class="desc">Engineered a privacy-preserving security product using federated learning; conducted adversarial threat modelling to evaluate and harden system resilience with multi-modal authentication.</p>
+        <div class="project-link"><span>Access File</span> <span>↗</span></div>
+      </a>
+
+      <a href="https://github.com/karthikAu-cyber/wazuh-ssh-bruteforce-detection" target="_blank" rel="noopener noreferrer" class="glass project-card fade-up">
+        <div class="project-top"><span class="icon">📖</span><span class="ext">↗</span></div>
+        <div class="project-cat">SIEM & Threat Detection</div>
+        <h3>Wazuh SIEM: SSH Brute-Force Detection Lab</h3>
+        <p class="desc">Built a Wazuh SIEM lab using Wazuh OVA, Kali Linux, and Ubuntu to detect SSH brute-force activity. Configured Kali as a monitored endpoint with the Wazuh Agent and used Ubuntu to generate SSH password-guessing attempts with Hydra. Investigated alerts in Wazuh Threat Hunting, validated evidence using /var/log/auth.log, identified source IP and target user details, and mapped the activity to MITRE ATT&CK Credential Access / Brute Force. Documented the incident with SOC-style findings, severity, evidence, and remediation recommendations.</p>
         <div class="project-link"><span>Access File</span> <span>↗</span></div>
       </a>
 
@@ -330,6 +366,53 @@
       <p class="section-subtitle">Professional certifications and accreditations</p>
       <hr class="divider" />
     </div>
+
+    <!-- ── Category Summary Cards ── -->
+    <div class="grid-2" style="margin-bottom:3rem;">
+
+      <div class="glass cert-category-card fade-up">
+        <div class="cert-cat-header"><span class="icon" style="color:#4dd0e1">🛡</span><h3>Core Cybersecurity</h3></div>
+        <div class="cert-cat-list">
+          <div>• Certified Ethical Hacker — CEH</div>
+          <div>• Certified in Cybersecurity (CC) Training</div>
+          <div>• Cyber Security Associate — Reliance Foundation</div>
+        </div>
+        <p class="cert-cat-desc">Built a strong foundation in cybersecurity principles, ethical hacking, security controls, threat analysis, and defensive security practices.</p>
+      </div>
+
+      <div class="glass cert-category-card fade-up">
+        <div class="cert-cat-header"><span class="icon" style="color:#ff5252">🔍</span><h3>SOC, Threat Intelligence &amp; Operations</h3></div>
+        <div class="cert-cat-list">
+          <div>• SOC Project Training — NullClass</div>
+          <div>• Cyber Threat Intelligence 101 — arcX</div>
+        </div>
+        <p class="cert-cat-desc">Focused on SOC workflows, alert investigation, threat intelligence fundamentals, incident handling, and security monitoring concepts.</p>
+      </div>
+
+      <div class="glass cert-category-card fade-up">
+        <div class="cert-cat-header"><span class="icon" style="color:#64ffda">☁</span><h3>Cloud Security</h3></div>
+        <div class="cert-cat-list">
+          <div>• Microsoft Azure Fundamentals — AZ-900</div>
+          <div>• AWS Academy Cloud Security Foundations</div>
+        </div>
+        <p class="cert-cat-desc">Covered cloud fundamentals, AWS cloud security principles, Azure services, identity, access management, and shared responsibility concepts.</p>
+      </div>
+
+      <div class="glass cert-category-card fade-up">
+        <div class="cert-cat-header"><span class="icon" style="color:#b388ff">🔒</span><h3>Security Specializations</h3></div>
+        <div class="cert-cat-list">
+          <div>• Endpoint Security — Cisco</div>
+          <div>• Ethical Hacking — Cisco</div>
+          <div>• Critical Infrastructure Protection — OPSWAT</div>
+          <div>• OWASP Top 10 — Linux Foundation</div>
+        </div>
+        <p class="cert-cat-desc">Strengthened knowledge in endpoint defense, ethical hacking fundamentals, web application risks, OWASP Top 10, and critical infrastructure security.</p>
+      </div>
+
+    </div>
+
+    <!-- ── Main Certificate Cards ── -->
+    <h3 class="sub-section-title fade-up">Key Certifications</h3>
     <div class="grid-3">
 
       <div class="glass cert-card fade-up">
@@ -341,43 +424,29 @@
 
       <div class="glass cert-card fade-up">
         <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
-        <div class="cert-id">CC</div><h3>Certified in Cybersecurity (CC)</h3>
+        <div class="cert-id">CC</div><h3>Certified in Cybersecurity (CC) Training</h3>
         <div class="cert-issuer">ISC²</div><div class="cert-year">Issued: 2025–2028</div>
         <div class="cert-badge">✓ Verified Credential</div>
       </div>
 
       <div class="glass cert-card fade-up">
         <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
-        <div class="cert-id">CISCO-EH</div><h3>Ethical Hacker</h3>
-        <div class="cert-issuer">Cisco</div><div class="cert-year">Issued: 2025</div>
+        <div class="cert-id">AZ-900</div><h3>Microsoft Azure Fundamentals</h3>
+        <div class="cert-issuer">Microsoft</div><div class="cert-year">Issued: 2023</div>
         <div class="cert-badge">✓ Verified Credential</div>
       </div>
 
       <div class="glass cert-card fade-up">
         <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
-        <div class="cert-id">OWASP</div><h3>OWASP Top 10</h3>
-        <div class="cert-issuer">Linux Foundation</div><div class="cert-year">Issued: 2025</div>
-        <div class="cert-badge">✓ Verified Credential</div>
-      </div>
-
-      <div class="glass cert-card fade-up">
-        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
-        <div class="cert-id">CIP</div><h3>Critical Infrastructure Protection</h3>
-        <div class="cert-issuer">OPSWAT</div><div class="cert-year">Issued: 2025–2026</div>
+        <div class="cert-id">AWS-CSF</div><h3>AWS Academy Cloud Security Foundations</h3>
+        <div class="cert-issuer">AWS Academy</div><div class="cert-year">Issued: 2025</div>
         <div class="cert-badge">✓ Verified Credential</div>
       </div>
 
       <div class="glass cert-card fade-up">
         <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
         <div class="cert-id">SOC</div><h3>SOC Project Training</h3>
-        <div class="cert-issuer">Nullclass</div><div class="cert-year">Issued: 2025</div>
-        <div class="cert-badge">✓ Verified Credential</div>
-      </div>
-
-      <div class="glass cert-card fade-up">
-        <div class="cert-top"><div class="cert-icon-wrap"><span class="icon">🏅</span></div><span class="cert-verified">✓</span></div>
-        <div class="cert-id">AZ-900</div><h3>Azure Fundamentals AZ-900</h3>
-        <div class="cert-issuer">Microsoft</div><div class="cert-year">Issued: 2023</div>
+        <div class="cert-issuer">NullClass</div><div class="cert-year">Issued: 2025</div>
         <div class="cert-badge">✓ Verified Credential</div>
       </div>
 
@@ -389,6 +458,34 @@
       </div>
 
     </div>
+
+    <!-- ── Additional Training ── -->
+    <h3 class="sub-section-title fade-up" style="margin-top:3rem;">Additional Training</h3>
+    <div class="glass additional-training fade-up">
+      <div class="training-grid">
+        <div class="training-item">
+          <span class="training-dot"></span>
+          <div><strong>Endpoint Security</strong><span class="training-issuer">Cisco</span></div>
+        </div>
+        <div class="training-item">
+          <span class="training-dot"></span>
+          <div><strong>Ethical Hacking</strong><span class="training-issuer">Cisco</span></div>
+        </div>
+        <div class="training-item">
+          <span class="training-dot"></span>
+          <div><strong>Introduction to Critical Infrastructure Protection</strong><span class="training-issuer">OPSWAT</span></div>
+        </div>
+        <div class="training-item">
+          <span class="training-dot"></span>
+          <div><strong>Understanding the OWASP® Top 10 Security Threats</strong><span class="training-issuer">The Linux Foundation</span></div>
+        </div>
+        <div class="training-item">
+          <span class="training-dot"></span>
+          <div><strong>Cyber Security Associate</strong><span class="training-issuer">Reliance Foundation Skilling Academy</span></div>
+        </div>
+      </div>
+    </div>
+
     <div class="glass cert-footer fade-up" style="margin-top:3rem;">
       <p>All certifications are actively maintained and regularly renewed.<span>Verification credentials available upon request.</span></p>
     </div>
